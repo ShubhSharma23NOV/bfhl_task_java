@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/bfhl")
 public class BfhlController {
@@ -25,5 +27,11 @@ public class BfhlController {
     public ResponseEntity<BfhlResponse> process(@Valid @RequestBody BfhlRequest request) {
         BfhlResponse response = bfhlService.processData(request.getData());
         return ResponseEntity.ok(response);
+    }
+    
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<Object> getOperationCode() {
+        return ResponseEntity.ok(Map.of("operation_code", 1));
     }
 }
