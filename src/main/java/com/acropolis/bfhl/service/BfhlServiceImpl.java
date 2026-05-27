@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class BfhlServiceImpl implements BfhlService {
     
-    // Constants - Replace these with your actual details
+    // Constants - Mock data for demonstration
     private static final String USER_ID = "shubh_sharma_23112005";
     private static final String EMAIL = "shubhsharma231358@acropolis.in";
     private static final String ROLL_NUMBER = "0827CY231066";

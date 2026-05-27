@@ -29,7 +29,7 @@ public class BfhlController {
         return ResponseEntity.ok(response);
     }
     
-    @GetMapping
+    @GetMapping("/health")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Object> getOperationCode() {
         return ResponseEntity.ok(Map.of("operation_code", 1));
